@@ -80,7 +80,7 @@ body{
 }
 
 .nabar .navbar-extra .search{
-  background-image: url('../img/photo_zoom.png');
+  background-image: url('#');
 }
 
 .navbar .navbar-extra img{
@@ -99,7 +99,7 @@ body{
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('../img/copi.jpg');
+  background-image: url('copi.jpg');
   background-repeat: no-repeat;
   position: relative;
 }
