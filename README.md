@@ -2,5 +2,5 @@
 <p> KopiKenanganSenja <br>
     belajar web HTML 
 </p>
-<img url=('kopi.jpg')></img>
+<img scr='kopi.jpg'/>
 
