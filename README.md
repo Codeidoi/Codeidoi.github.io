@@ -1,6 +1,8 @@
 # Codeidoi.github.io
-<p> KopiKenanganSenja <br>
-    belajar web HTML 
+<p>KenanganSenja <br>
+_________________
+<br>
+    
 </p>
 <img src="copi.jpg"/>
 
