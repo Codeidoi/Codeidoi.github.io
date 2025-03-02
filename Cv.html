@@ -4,8 +4,127 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Code_IDoI</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="#">
 </head>
+  <style>
+    /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.cv-container {
+  background-color: white;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: slideUp 1s ease-in-out;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #3333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-content, .education-item, .experience-item, .skills-list {
+  font-size: 1rem;
+  color: #5555;
+}
+
+.education-list, .experience-list, .skills-list {
+  list-style: none;
+}
+
+.education-item, .experience-item {
+  margin-bottom: 8px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.skill {
+  margin-bottom: 5px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 30px;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+  </style>
+  <!-- End Style-->
+
+  
 <body>
   <div class="cv-container">
     <div class="profile">
@@ -41,12 +160,35 @@
         <li class="skill">Git, Version Control</li>
       </ul>
     </div>
-
+         <!--- FOOTER  --->
     <div class="footer">
       <p>Kontak: codeidoi.github.io | Telepon: +62 123 456 789</p>
     </div>
   </div>
+      <!-- Javasrcipt -->
+  <script>
+    // Efek animasi ketika halaman dimuat
+document.addEventListener("DOMContentLoaded", function() {
+  const profileImg = document.querySelector('.profile-img');
+  profileImg.addEventListener('mouseenter', function() {
+    profileImg.style.transform = "scale(1.2)";
+  });
+  profileImg.addEventListener('mouseleave', function() {
+    profileImg.style.transform = "scale(1)";
+  });
 
-  <script src="script.js"></script>
+  // Animasi untuk menampilkan elemen dengan efek fade
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((section, index) => {
+    setTimeout(() => {
+      section.style.opacity = 1;
+      section.style.transform = "translateY(0)";
+    }, index * 500);
+  });
+});
+  </script>
+  <!-- End Js-->
 </body>
 </html>
+
+
