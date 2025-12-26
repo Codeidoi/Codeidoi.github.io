@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Portofolio Saya</title>
+    <title>CodeIdOi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
@@ -34,36 +34,43 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container position-relative">
 
-        <!-- KIRI -->
-        <a class="navbar-brand" href="#">Portofolio</a>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container">
 
-        <!-- TENGAH -->
-        <div class="position-absolute start-50 translate-middle-x text-white fw-semibold">
-        </div>
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">CodeIdOi</a>
 
-        <!-- TOGGLE -->
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- KANAN -->
-        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#studi">Studi</a></li>
-                <li class="nav-item"><a class="nav-link" href="#kemampuan">Kemampuan</a></li>
-                <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
-                <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-            </ul>
-        </div>
-
+    <!-- Tanggal & jam di tengah -->
+    <div class="position-absolute start-50 translate-middle-x text-white fw-semibold">
+      <span id="datetime"></span>
     </div>
-</nav>
 
+    <!-- Toggle Button -->
+    <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+      ☰ Menu
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel" style="width:50%;">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#profil" data-bs-dismiss="offcanvas">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#studi" data-bs-dismiss="offcanvas">Studi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kemampuan" data-bs-dismiss="offcanvas">Kemampuan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#project" data-bs-dismiss="offcanvas">Project</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri" data-bs-dismiss="offcanvas">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak" data-bs-dismiss="offcanvas">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</nav>
 <!-- PROFIL -->
 <section id="profil" class="bg-light text-center">
     <div class="container">
@@ -196,7 +203,7 @@
             year: 'numeric'
         });
         const time = now.toLocaleTimeString('id-ID');
-        document.getElementById("datetime").innerHTML = date + " | " + time;
+        document.getElementById("datetime").innerHTML = time + " <br> " + date;
     }
     setInterval(updateDateTime, 1000);
     updateDateTime();
